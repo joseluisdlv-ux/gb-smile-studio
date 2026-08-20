@@ -231,8 +231,8 @@ function Index() {
               </p>
               <div className="mt-8 grid grid-cols-3 gap-4 text-center">
                 {[
-                  { n: "+10", l: "anos de atuação" },
-                  { n: "+3.000", l: "sorrisos atendidos" },
+                  { n: "4", l: "anos de atuação" },
+                  { n: "700+", l: "sorrisos atendidos" },
                   { n: "8", l: "especialidades" },
                 ].map((s) => (
                   <div key={s.l} className="rounded-xl bg-secondary px-3 py-4">
@@ -242,11 +242,7 @@ function Index() {
                     </p>
                   </div>
                 ))}
-              <div className="mt-6 text-sm text-muted-foreground">
-                <p className="font-medium text-foreground">Dra. Isabela Galvão</p>
-                <p>CRO 140346 | CROSP 026253</p>
               </div>
-            </div>
             </div>
             <div className="relative">
               <img
