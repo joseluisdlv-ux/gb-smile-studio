@@ -82,7 +82,6 @@ const depoimentos = [
 
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [enviado, setEnviado] = useState(false);
   const [erro, setErro] = useState("");
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
