@@ -381,7 +381,6 @@ function Index() {
               <div className="mt-6 space-y-4">
                 {[
                   { name: "nome", label: "Nome completo", type: "text", ph: "Seu nome" },
-                  { name: "email", label: "E-mail", type: "email", ph: "voce@email.com" },
                   { name: "telefone", label: "Telefone / WhatsApp", type: "tel", ph: "(11) 4538-5119" },
                 ].map((f) => (
                   <div key={f.name}>
@@ -507,10 +506,15 @@ function Index() {
           <div>
             <h3 className="font-display text-lg">Contato</h3>
             <ul className="mt-4 space-y-2 text-sm text-primary-foreground/75">
-              <li>(11) 99999-9999</li>
-              <li>contato@gbodontologia.com.br</li>
-              <li>Centro, Itatiba - SP</li>
+              <li>(11) 4538-5119</li>
+              <li>Av. Campinas, 341 - Vila Brasileira, Itatiba - SP, 13256-500</li>
             </ul>
+          </div>
+
+          <div className="sm:col-span-2 lg:col-span-4">
+            <p className="text-center text-xs text-primary-foreground/60">
+              Dra. Isabela Galvão — CRO 140346 | CROSP 026253
+            </p>
           </div>
         </div>
         <div className="border-t border-accent/20 py-5 text-center text-xs text-primary-foreground/60">
