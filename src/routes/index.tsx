@@ -97,7 +97,7 @@ function Index() {
 
     setErro("");
     const texto = `Olá! Gostaria de agendar uma consulta.\n\nNome: ${nome}\nTelefone: ${telefone}\nServiço desejado: ${servico}${mensagem ? `\nMensagem: ${mensagem}` : ""}`;
-    window.open(`https://wa.me/5511486333301?text=${encodeURIComponent(texto)}`, "_blank");
+    window.open(`https://wa.me/551148633301?text=${encodeURIComponent(texto)}`, "_blank");
     e.currentTarget.reset();
   }
 
