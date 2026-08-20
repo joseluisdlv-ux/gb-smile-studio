@@ -23,7 +23,7 @@ import {
   Wand2,
 } from "lucide-react";
 
-import logo from "@/assets/gb-logo.asset.json";
+
 import heroImg from "@/assets/hero-clinic.jpg";
 import teamImg from "@/assets/team.jpg";
 
@@ -108,7 +108,7 @@ function Index() {
         <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-3 lg:flex lg:justify-between">
           <a href="#inicio" className="flex min-w-0 items-center gap-3">
             <img
-              src={logo.url}
+              src="/favicon.png"
               alt="Logo GB Odontologia"
               width={48}
               height={48}
@@ -440,7 +440,7 @@ function Index() {
           <div>
             <div className="flex items-center gap-3">
               <img
-                src={logo.url}
+                src="/favicon.png"
                 alt="Logo GB Odontologia"
                 loading="lazy"
                 width={44}
