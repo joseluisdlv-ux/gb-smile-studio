@@ -341,22 +341,13 @@ function Index() {
               <ul className="mt-8 space-y-4 text-sm">
                 <li className="flex items-start gap-3">
                   <Phone size={18} className="mt-0.5 shrink-0 text-accent" />
-                  <a href="tel:+551199999999" className="text-foreground/85 hover:text-primary">
-                    (11) 99999-9999
-                  </a>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Mail size={18} className="mt-0.5 shrink-0 text-accent" />
-                  <a
-                    href="mailto:contato@gbodontologia.com.br"
-                    className="text-foreground/85 hover:text-primary"
-                  >
-                    contato@gbodontologia.com.br
+                  <a href="tel:+551145385119" className="text-foreground/85 hover:text-primary">
+                    (11) 4538-5119
                   </a>
                 </li>
                 <li className="flex items-start gap-3">
                   <MapPin size={18} className="mt-0.5 shrink-0 text-accent" />
-                  <span className="text-foreground/85">Centro, Itatiba - São Paulo</span>
+                  <span className="text-foreground/85">Av. Campinas, 341 - Vila Brasileira, Itatiba - SP, 13256-500</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Clock size={18} className="mt-0.5 shrink-0 text-accent" />
