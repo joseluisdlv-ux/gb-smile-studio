@@ -425,11 +425,6 @@ function Index() {
               </div>
 
               {erro && <p className="mt-4 text-sm text-primary">{erro}</p>}
-              {enviado && (
-                <p className="reveal mt-4 rounded-lg bg-accent-soft px-4 py-3 text-sm text-accent-foreground">
-                  Solicitação enviada! Entraremos em contato em breve.
-                </p>
-              )}
 
               <button type="submit" className="btn-gold mt-6 w-full">
                 Solicitar agendamento
