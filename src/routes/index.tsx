@@ -369,7 +369,7 @@ function Index() {
               <div className="mt-8 overflow-hidden rounded-2xl border border-border">
                 <iframe
                   title="Mapa da GB Odontologia em Itatiba"
-                  src="https://www.google.com/maps?q=Itatiba,+S%C3%A3o+Paulo&output=embed"
+                  src="https://www.google.com/maps?q=Av.%20Campinas%2C%20341%20-%20Vila%20Brasileira%2C%20Itatiba%20-%20SP%2C%2013256-500&output=embed"
                   loading="lazy"
                   className="h-64 w-full border-0"
                 />
@@ -382,7 +382,7 @@ function Index() {
                 {[
                   { name: "nome", label: "Nome completo", type: "text", ph: "Seu nome" },
                   { name: "email", label: "E-mail", type: "email", ph: "voce@email.com" },
-                  { name: "telefone", label: "Telefone / WhatsApp", type: "tel", ph: "(11) 99999-9999" },
+                  { name: "telefone", label: "Telefone / WhatsApp", type: "tel", ph: "(11) 4538-5119" },
                 ].map((f) => (
                   <div key={f.name}>
                     <label htmlFor={f.name} className="text-xs tracking-wide text-muted-foreground uppercase">
