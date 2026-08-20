@@ -82,23 +82,22 @@ const depoimentos = [
 
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [enviado, setEnviado] = useState(false);
   const [erro, setErro] = useState("");
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     const nome = String(data.get("nome") ?? "").trim();
-    const email = String(data.get("email") ?? "").trim();
     const telefone = String(data.get("telefone") ?? "").trim();
+    const servico = String(data.get("servico") ?? "").trim();
+    const mensagem = String(data.get("mensagem") ?? "").trim();
 
     if (nome.length < 2 || nome.length > 100) return setErro("Informe seu nome completo.");
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 255)
-      return setErro("Informe um e-mail válido.");
     if (telefone.replace(/\D/g, "").length < 10) return setErro("Informe um telefone válido com DDD.");
 
     setErro("");
-    setEnviado(true);
+    const texto = `Olá! Gostaria de agendar uma consulta.\n\nNome: ${nome}\nTelefone: ${telefone}\nServiço desejado: ${servico}${mensagem ? `\nMensagem: ${mensagem}` : ""}`;
+    window.open(`https://wa.me/5511486333301?text=${encodeURIComponent(texto)}`, "_blank");
     e.currentTarget.reset();
   }
 
@@ -231,8 +230,8 @@ function Index() {
               </p>
               <div className="mt-8 grid grid-cols-3 gap-4 text-center">
                 {[
-                  { n: "+10", l: "anos de atuação" },
-                  { n: "+3.000", l: "sorrisos atendidos" },
+                  { n: "4", l: "anos de atuação" },
+                  { n: "700+", l: "sorrisos atendidos" },
                   { n: "8", l: "especialidades" },
                 ].map((s) => (
                   <div key={s.l} className="rounded-xl bg-secondary px-3 py-4">
@@ -242,11 +241,7 @@ function Index() {
                     </p>
                   </div>
                 ))}
-              <div className="mt-6 text-sm text-muted-foreground">
-                <p className="font-medium text-foreground">Dra. Isabela Galvão</p>
-                <p>CRO 140346 | CROSP 026253</p>
               </div>
-            </div>
             </div>
             <div className="relative">
               <img
@@ -430,11 +425,6 @@ function Index() {
               </div>
 
               {erro && <p className="mt-4 text-sm text-primary">{erro}</p>}
-              {enviado && (
-                <p className="reveal mt-4 rounded-lg bg-accent-soft px-4 py-3 text-sm text-accent-foreground">
-                  Solicitação enviada! Entraremos em contato em breve.
-                </p>
-              )}
 
               <button type="submit" className="btn-gold mt-6 w-full">
                 Solicitar agendamento
