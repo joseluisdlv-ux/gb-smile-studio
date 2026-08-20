@@ -4,7 +4,6 @@ import {
   Menu,
   X,
   Phone,
-  Mail,
   MapPin,
   Clock,
   Star,
@@ -243,7 +242,11 @@ function Index() {
                     </p>
                   </div>
                 ))}
+              <div className="mt-6 text-sm text-muted-foreground">
+                <p className="font-medium text-foreground">Dra. Isabela Galvão</p>
+                <p>CRO 140346 | CROSP 026253</p>
               </div>
+            </div>
             </div>
             <div className="relative">
               <img
