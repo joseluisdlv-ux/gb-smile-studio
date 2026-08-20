@@ -89,16 +89,16 @@ function Index() {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     const nome = String(data.get("nome") ?? "").trim();
-    const email = String(data.get("email") ?? "").trim();
     const telefone = String(data.get("telefone") ?? "").trim();
+    const servico = String(data.get("servico") ?? "").trim();
+    const mensagem = String(data.get("mensagem") ?? "").trim();
 
     if (nome.length < 2 || nome.length > 100) return setErro("Informe seu nome completo.");
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 255)
-      return setErro("Informe um e-mail válido.");
     if (telefone.replace(/\D/g, "").length < 10) return setErro("Informe um telefone válido com DDD.");
 
     setErro("");
-    setEnviado(true);
+    const texto = `Olá! Gostaria de agendar uma consulta.\n\nNome: ${nome}\nTelefone: ${telefone}\nServiço desejado: ${servico}${mensagem ? `\nMensagem: ${mensagem}` : ""}`;
+    window.open(`https://wa.me/5511486333301?text=${encodeURIComponent(texto)}`, "_blank");
     e.currentTarget.reset();
   }
 
