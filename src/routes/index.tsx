@@ -353,10 +353,8 @@ function Index() {
                   <span className="text-foreground/85">Av. Campinas, 341 - Vila Brasileira, Itatiba - SP, 13256-500</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Clock size={18} className="mt-0.5 shrink-0 text-accent" />
-                  <span className="text-foreground/85">
-                    Seg a Sex: 08h - 19h · Sáb: 08h - 13h
-                  </span>
+                  <Award size={18} className="mt-0.5 shrink-0 text-accent" />
+                  <span className="text-foreground/85">Dra. Isabela Galvão — CRO 140346 | CROSP 026253</span>
                 </li>
               </ul>
 
