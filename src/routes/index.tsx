@@ -4,7 +4,6 @@ import {
   Menu,
   X,
   Phone,
-  Mail,
   MapPin,
   Clock,
   Star,
@@ -47,7 +46,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const WHATSAPP = "https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta";
+const WHATSAPP = "https://wa.me/551148633301?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta";
 
 const nav = [
   { label: "Início", href: "#inicio" },
@@ -243,7 +242,11 @@ function Index() {
                     </p>
                   </div>
                 ))}
+              <div className="mt-6 text-sm text-muted-foreground">
+                <p className="font-medium text-foreground">Dra. Isabela Galvão</p>
+                <p>CRO 140346 | CROSP 026253</p>
               </div>
+            </div>
             </div>
             <div className="relative">
               <img
@@ -341,28 +344,17 @@ function Index() {
               <ul className="mt-8 space-y-4 text-sm">
                 <li className="flex items-start gap-3">
                   <Phone size={18} className="mt-0.5 shrink-0 text-accent" />
-                  <a href="tel:+551199999999" className="text-foreground/85 hover:text-primary">
-                    (11) 99999-9999
-                  </a>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Mail size={18} className="mt-0.5 shrink-0 text-accent" />
-                  <a
-                    href="mailto:contato@gbodontologia.com.br"
-                    className="text-foreground/85 hover:text-primary"
-                  >
-                    contato@gbodontologia.com.br
+                  <a href="tel:+551145385119" className="text-foreground/85 hover:text-primary">
+                    (11) 4538-5119
                   </a>
                 </li>
                 <li className="flex items-start gap-3">
                   <MapPin size={18} className="mt-0.5 shrink-0 text-accent" />
-                  <span className="text-foreground/85">Centro, Itatiba - São Paulo</span>
+                  <span className="text-foreground/85">Av. Campinas, 341 - Vila Brasileira, Itatiba - SP, 13256-500</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Clock size={18} className="mt-0.5 shrink-0 text-accent" />
-                  <span className="text-foreground/85">
-                    Seg a Sex: 08h - 19h · Sáb: 08h - 13h
-                  </span>
+                  <Award size={18} className="mt-0.5 shrink-0 text-accent" />
+                  <span className="text-foreground/85">Dra. Isabela Galvão — CRO 140346 | CROSP 026253</span>
                 </li>
               </ul>
 
@@ -378,7 +370,7 @@ function Index() {
               <div className="mt-8 overflow-hidden rounded-2xl border border-border">
                 <iframe
                   title="Mapa da GB Odontologia em Itatiba"
-                  src="https://www.google.com/maps?q=Itatiba,+S%C3%A3o+Paulo&output=embed"
+                  src="https://www.google.com/maps?q=Av.%20Campinas%2C%20341%20-%20Vila%20Brasileira%2C%20Itatiba%20-%20SP%2C%2013256-500&output=embed"
                   loading="lazy"
                   className="h-64 w-full border-0"
                 />
@@ -390,8 +382,7 @@ function Index() {
               <div className="mt-6 space-y-4">
                 {[
                   { name: "nome", label: "Nome completo", type: "text", ph: "Seu nome" },
-                  { name: "email", label: "E-mail", type: "email", ph: "voce@email.com" },
-                  { name: "telefone", label: "Telefone / WhatsApp", type: "tel", ph: "(11) 99999-9999" },
+                  { name: "telefone", label: "Telefone / WhatsApp", type: "tel", ph: "(11) 4538-5119" },
                 ].map((f) => (
                   <div key={f.name}>
                     <label htmlFor={f.name} className="text-xs tracking-wide text-muted-foreground uppercase">
@@ -516,10 +507,15 @@ function Index() {
           <div>
             <h3 className="font-display text-lg">Contato</h3>
             <ul className="mt-4 space-y-2 text-sm text-primary-foreground/75">
-              <li>(11) 99999-9999</li>
-              <li>contato@gbodontologia.com.br</li>
-              <li>Centro, Itatiba - SP</li>
+              <li>(11) 4538-5119</li>
+              <li>Av. Campinas, 341 - Vila Brasileira, Itatiba - SP, 13256-500</li>
             </ul>
+          </div>
+
+          <div className="sm:col-span-2 lg:col-span-4">
+            <p className="text-center text-xs text-primary-foreground/60">
+              Dra. Isabela Galvão — CRO 140346 | CROSP 026253
+            </p>
           </div>
         </div>
         <div className="border-t border-accent/20 py-5 text-center text-xs text-primary-foreground/60">
