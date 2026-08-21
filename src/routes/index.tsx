@@ -343,8 +343,8 @@ function Index() {
               <X size={20} />
             </button>
             <img
-              src={galeria[lightbox].src}
-              alt={galeria[lightbox].alt}
+              src={galeria[lightbox]?.src}
+              alt={galeria[lightbox]?.alt ?? ""}
               className="max-h-[85vh] w-auto max-w-full rounded-2xl object-contain"
             />
           </div>
