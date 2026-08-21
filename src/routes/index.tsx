@@ -68,6 +68,7 @@ const nav = [
   { label: "Início", href: "#inicio" },
   { label: "Sobre", href: "#sobre" },
   { label: "Serviços", href: "#servicos" },
+  { label: "Resultados", href: "#resultados" },
   { label: "Depoimentos", href: "#depoimentos" },
   { label: "Contato", href: "#contato" },
 ];
@@ -532,9 +533,8 @@ function Index() {
             </p>
             <div className="mt-5 flex gap-3">
               {[
-                { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-                { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-                { icon: MessageCircle, href: WHATSAPP, label: "WhatsApp" },
+                { icon: Instagram, href: "https://www.instagram.com/draisagbodontologia", label: "Instagram" },
+                { icon: Facebook, href: "https://www.facebook.com/share/19cBydpSHC/", label: "Facebook" },
               ].map((s) => (
                 <a
                   key={s.label}
@@ -567,7 +567,7 @@ function Index() {
             <h3 className="font-display text-lg">Horários</h3>
             <ul className="mt-4 space-y-2 text-sm text-primary-foreground/75">
               <li>Segunda a Sexta: 08h - 19h</li>
-              <li>Sábado: 08h - 13h</li>
+              <li>Sábado: 08h - 12h</li>
               <li>Domingo: Fechado</li>
             </ul>
           </div>
