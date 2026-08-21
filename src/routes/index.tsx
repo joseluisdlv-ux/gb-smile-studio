@@ -26,12 +26,12 @@ import {
 
 import heroImg from "@/assets/hero-clinic.jpg";
 import teamImg from "@/assets/team.jpg";
-import caso1 from "@/assets/caso-1.jpg.";
-import caso2 from "@/assets/caso-2.jpg.";
-import caso3 from "@/assets/caso-3.jpg.";
-import caso4 from "@/assets/caso-4.jpg.";
-import caso5 from "@/assets/caso-5.jpg.";
-import caso6 from "@/assets/caso-6.jpg.";
+import caso1 from "@/assets/caso-1.jpg";
+import caso2 from "@/assets/caso-2.jpg";
+import caso3 from "@/assets/caso-3.jpg";
+import caso4 from "@/assets/caso-4.jpg";
+import caso5 from "@/assets/caso-5.jpg";
+import caso6 from "@/assets/caso-6.jpg";
 
 const galeria = [
   { src: caso1, alt: "Antes e depois de reabilitação oral em paciente masculino" },
