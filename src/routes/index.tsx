@@ -290,6 +290,67 @@ function Index() {
           </div>
         </section>
 
+        {/* GALERIA */}
+        <section id="resultados" className="border-y border-border/60 bg-secondary/60 py-14 sm:py-16">
+          <div className="mx-auto max-w-6xl px-4">
+            <p className="text-xs tracking-[0.3em] text-accent uppercase">Resultados</p>
+            <h2 className="mt-3 font-display text-3xl font-semibold text-primary sm:text-4xl">
+              Alguns de Nossos Resultados
+            </h2>
+            <p className="mt-2 text-sm text-muted-foreground">Transformações que falam por si</p>
+          </div>
+          <div className="mt-8 overflow-x-auto scroll-smooth pb-3 [scrollbar-width:thin]">
+            <ul className="mx-auto flex w-max max-w-none gap-4 px-4 sm:px-[max(1rem,calc((100vw-72rem)/2))]">
+              {galeria.map((g, i) => (
+                <li key={g.src}>
+                  <button
+                    type="button"
+                    onClick={() => setLightbox(i)}
+                    aria-label={`Ampliar imagem: ${g.alt}`}
+                    className="block h-[320px] overflow-hidden rounded-2xl border border-accent/30 bg-background shadow-[var(--shadow-soft)] transition-transform duration-300 hover:-translate-y-1 hover:border-accent"
+                  >
+                    <img
+                      src={g.src}
+                      alt={g.alt}
+                      loading="lazy"
+                      className="h-[320px] w-auto max-w-none object-cover"
+                    />
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <p className="mt-1 text-center text-xs text-muted-foreground">
+            Arraste para o lado para ver mais · toque para ampliar
+          </p>
+        </section>
+
+        {lightbox !== null && (
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-label="Imagem ampliada"
+            onClick={() => setLightbox(null)}
+            className="fixed inset-0 z-[60] flex items-center justify-center bg-primary/90 p-4 backdrop-blur-sm"
+          >
+            <button
+              type="button"
+              aria-label="Fechar"
+              onClick={() => setLightbox(null)}
+              className="absolute top-4 right-4 rounded-full border border-accent/50 p-2 text-accent"
+            >
+              <X size={20} />
+            </button>
+            <img
+              src={galeria[lightbox].src}
+              alt={galeria[lightbox].alt}
+              className="max-h-[85vh] w-auto max-w-full rounded-2xl object-contain"
+            />
+          </div>
+        )}
+
+
+
         {/* SERVIÇOS */}
         <section id="servicos" className="surface-marsala py-20 sm:py-24">
           <div className="mx-auto max-w-6xl px-4">
