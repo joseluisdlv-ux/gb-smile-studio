@@ -99,6 +99,7 @@ const depoimentos = [
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [erro, setErro] = useState("");
+  const [lightbox, setLightbox] = useState<number | null>(null);
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
