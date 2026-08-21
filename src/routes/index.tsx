@@ -26,6 +26,22 @@ import {
 
 import heroImg from "@/assets/hero-clinic.jpg";
 import teamImg from "@/assets/team.jpg";
+import caso1 from "@/assets/caso-1.jpg.asset.json";
+import caso2 from "@/assets/caso-2.jpg.asset.json";
+import caso3 from "@/assets/caso-3.jpg.asset.json";
+import caso4 from "@/assets/caso-4.jpg.asset.json";
+import caso5 from "@/assets/caso-5.jpg.asset.json";
+import caso6 from "@/assets/caso-6.jpg.asset.json";
+
+const galeria = [
+  { src: caso1.url, alt: "Antes e depois de reabilitação oral em paciente masculino" },
+  { src: caso2.url, alt: "Antes e depois de reabilitação oral em paciente feminina" },
+  { src: caso3.url, alt: "Antes e depois de prótese dentária em paciente masculino" },
+  { src: caso4.url, alt: "Antes e depois de implantes dentários em paciente masculino" },
+  { src: caso5.url, alt: "Close-up do sorriso antes e depois de lentes de contato dental" },
+  { src: caso6.url, alt: "Close-up do sorriso antes e depois de reabilitação com prótese" },
+];
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
